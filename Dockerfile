@@ -14,9 +14,8 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 ADD start.sh /usr/local/bin/start.sh
 ADD vsftpd.conf /etc/vsftpd.conf
 
+RUN chmod +x /usr/local/bin/start.sh
 RUN mkdir /ftp
-
-VOLUME ["/ftp"]
 
 EXPOSE 20 21
 EXPOSE 12020 12021 12022 12023 12024 12025
