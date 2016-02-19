@@ -8,3 +8,8 @@ This repo defines a docker image for an ftp server. It is based on vsftpd. You c
 Then you should be able to ftp to your server:
 
 	ftp ftp://myuser:verysecretpwd@<docker hostname>:2021
+	
+For the lacy ones:
+------------------
+
+Build the Image locally with `build.sh` and start the container with `run.sh`. `run.sh` starts the container with the user `myuser`, export all used Ports and mount the directory _./ftp-files_ to the directory _/ftp_ in the container.
